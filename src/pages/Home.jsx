@@ -21,9 +21,8 @@ const slides = [
     ),
     description: (
       <>
-        High Conversion Landing Page <br />
-        Naikkan Penjualan Online Sampai 5x Lipat Dengan <br />
-        Landing Page yang Convert
+        Web order FnB <br />
+        Memudahkan pembeli untuk membeli produk yang di jual <br />
       </>
     ),
     descColor: "text-gray-900",
@@ -68,9 +67,8 @@ const slides = [
     ),
     description: (
       <>
-        High Conversion Landing Page <br />
-        Naikkan Penjualan Online Sampai 5x Lipat Dengan <br />
-        Landing Page yang Convert
+        Tingkatkan penjualan dengan Landing Page berkonversi tinggi <br />
+        Optimalkan tracking & analisis bisnis Anda dengan mudah <br />
       </>
     ),
     descColor: "text-white",
@@ -108,11 +106,11 @@ const Home = () => {
 
   return (
     <>
-      <div className="mt-10 relative">
+      <div className="mt-6 sm:mt-10 relative">
         {/* Background section */}
         <section
           className={`bg-gradient-to-br ${slides[current].bgFrom} ${slides[current].bgTo}
-              rounded-[2rem] mx-4 md:mx-10 overflow-hidden shadow-2xl`}
+              rounded-xl sm:rounded-2xl mx-2 xs:mx-3 sm:mx-6 md:mx-10 overflow-hidden shadow-2xl`}
         >
           <div className="relative w-full overflow-hidden">
             <div
@@ -122,24 +120,29 @@ const Home = () => {
               {slides.map((slide, index) => (
                 <div
                   key={index}
-                  className="w-full flex-shrink-0 flex flex-col md:flex-row items-center justify-between px-6 py-10 md:px-16 md:py-20 
-                             transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl"
+                  className="w-full flex-shrink-0 flex flex-col md:flex-row items-center justify-between 
+                             px-3 xs:px-4 sm:px-6 md:px-12 lg:px-16 
+                             py-6 xs:py-8 sm:py-10 md:py-16 lg:py-20
+                             transition-transform duration-500"
                 >
+                  {/* Text Section */}
                   <div className="md:w-1/2 text-center md:text-left">
-                    <h1 className="text-4xl md:text-5xl font-extrabold text-purple-900 mb-6">
+                    <h1 className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-purple-900 mb-3 xs:mb-4 sm:mb-6">
                       {slide.title}
                     </h1>
                     <p
-                      className={`text-lg mb-6 leading-relaxed ${slide.descColor} ${slide.descClass}`}
+                      className={`text-xs xs:text-sm sm:text-base md:text-lg mb-3 xs:mb-4 sm:mb-6 leading-relaxed ${slide.descColor} ${slide.descClass}`}
                     >
                       {slide.description}
                     </p>
                   </div>
-                  <div className="md:w-1/2 mt-10 md:mt-0 text-center">
+
+                  {/* Image Section */}
+                  <div className="md:w-1/2 mt-5 xs:mt-6 sm:mt-8 md:mt-0 text-center">
                     <img
                       src={slide.image}
                       alt="Slide"
-                      className="w-[85%] md:w-[70%] lg:w-[90%] h-auto mx-auto rounded-2xl shadow-lg 
+                      className="w-[85%] xs:w-[80%] sm:w-[70%] md:w-[65%] lg:w-[80%] h-auto mx-auto rounded-lg sm:rounded-2xl shadow-lg 
                                  transition-transform duration-700 hover:scale-105 hover:-translate-y-2"
                     />
                   </div>
@@ -149,12 +152,12 @@ const Home = () => {
           </div>
 
           {/* Navigation dots */}
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+          <div className="absolute bottom-3 xs:bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrent(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-2 h-2 xs:w-2.5 xs:h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
                   current === index ? "bg-white scale-125" : "bg-white/50"
                 }`}
               />
@@ -162,22 +165,22 @@ const Home = () => {
           </div>
 
           {/* Prev button */}
-          <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10">
+          <div className="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 z-10">
             <button
               onClick={prevSlide}
-              className="w-11 h-11 flex items-center justify-center rounded-full bg-white/70 border border-gray-300 backdrop-blur-md hover:bg-white hover:shadow-xl transition duration-300"
+              className="w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white/70 border border-gray-300 backdrop-blur-md hover:bg-white hover:shadow-xl transition duration-300"
             >
-              <div className="w-0 h-0 border-t-8 border-b-8 border-r-8 border-t-transparent border-b-transparent border-r-gray-700" />
+              <div className="w-0 h-0 border-t-4 xs:border-t-6 sm:border-t-8 border-b-4 xs:border-b-6 sm:border-b-8 border-r-4 xs:border-r-6 sm:border-r-8 border-t-transparent border-b-transparent border-r-gray-700" />
             </button>
           </div>
 
           {/* Next button */}
-          <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-10">
+          <div className="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 z-10">
             <button
               onClick={nextSlide}
-              className="w-11 h-11 flex items-center justify-center rounded-full bg-white/70 border border-gray-300 backdrop-blur-md hover:bg-white hover:shadow-xl transition duration-300"
+              className="w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white/70 border border-gray-300 backdrop-blur-md hover:bg-white hover:shadow-xl transition duration-300"
             >
-              <div className="w-0 h-0 border-t-8 border-b-8 border-l-8 border-t-transparent border-b-transparent border-l-gray-700" />
+              <div className="w-0 h-0 border-t-4 xs:border-t-6 sm:border-t-8 border-b-4 xs:border-b-6 sm:border-b-8 border-l-4 xs:border-l-6 sm:border-l-8 border-t-transparent border-b-transparent border-l-gray-700" />
             </button>
           </div>
         </section>
