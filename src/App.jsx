@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppBubble from "./components/WhatsAppBubble";
 import MakalahProposal from "./pages/MakalahProposal";
+import Clients from "./pages/Clients";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/stack" element={<Stack />} />
           <Route path="/benefit" element={<Benefit />} />
+          <Route path="/clients" element={<Clients />} />
         </Routes>
 
         <WhatsAppBubble />

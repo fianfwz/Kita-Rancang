@@ -3,35 +3,39 @@ import React from "react";
 const logos = [
   {
     name: "Logo D'Andalimans",
-    image: "/images/logo-dandalimans.png",
-  },
-  {
-    name: "Logo Videry",
-    image: "/images/logo-videry.png",
+    image: "/images/Dandalimans.png",
   },
   {
     name: "Logo JKT 23 FC",
-    image: "/images/",
+    image: "/images/jkt23.jpg",
   },
-  // Tambahkan logo lainnya di sini
+  // contoh tambahan, bisa tambah berapa pun nanti tetap center
+  // {
+  //   name: "Logo Baru",
+  //   image: "/images/new-logo.png",
+  // },
 ];
 
 const Logo = () => {
   return (
-    <section className="bg-white py-20 px-6 min-h-screen" id="logo-gallery">
-      <div className="max-w-6xl mx-auto text-center">
+    <section
+      className="bg-white py-20 px-6"
+      id="logo-gallery"
+    >
+      <div className="max-w-6xl mx-auto text-center w-full">
         <h2 className="text-4xl font-bold text-gray-800 mb-6">
-          Logo yang Pernah Saya Buat
+          Our Project Logo
         </h2>
         <p className="text-gray-600 mb-12">
-          Berikut adalah beberapa contoh logo hasil desain saya untuk berbagai brand dan kebutuhan.
+          Beberapa contoh logo hasil desain kami untuk berbagai brand dan kebutuhan.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        {/* Grid otomatis responsif & center */}
+        <div className="grid gap-10 justify-center grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
           {logos.map((logo, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300"
+              className="bg-gray-50 rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col items-center"
             >
               <img
                 src={logo.image}

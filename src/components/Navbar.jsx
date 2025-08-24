@@ -122,8 +122,8 @@ const Navbar = () => {
           </li>
 
           <li className="py-2 md:py-0">
-            <Link to="/our-client" onClick={() => { handleCloseDropdown(); setIsMobileMenuOpen(false); }}>
-              OUR CLIENT
+            <Link to="/clients" onClick={() => { handleCloseDropdown(); setIsMobileMenuOpen(false); }}>
+              OUR CLIENTS
             </Link>
           </li>
 
